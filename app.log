@@ -1,0 +1,263 @@
+2021-08-26 19:32:13,384 - root - INFO - On page: https://www.halffaceblades.com/account/login
+2021-08-26 19:32:19,370 - root - INFO - Found Elements with text: ['×']
+2021-08-26 19:32:19,402 - root - INFO - Clicking button
+2021-08-26 19:32:19,432 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div[2]/div/div[1]/div/button')
+2021-08-26 19:32:24,485 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:32:24,603 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:32:24,715 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:32:24,748 - root - INFO - Clicking input
+2021-08-26 19:32:26,369 - root - INFO - Clicked Locator(by='xpath', value='/html/body/main/div/div/div/div/div[2]/form/p[2]/input')
+2021-08-26 19:32:26,369 - root - INFO - On page: https://www.halffaceblades.com/collections/apparel
+2021-08-26 19:32:30,835 - root - ERROR - Failed to find element
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
+    elements = WebDriverWait(self.driver, 3).until(
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-08-26 19:32:34,042 - root - WARNING - Message: 
+
+2021-08-26 19:32:34,705 - root - INFO - Found Elements with text: ['$35.00', '$35.00', '$35.00', '$45.00', '$45.00', '$40.00', '$50.00', '$35.00', '$35.00', '$35.00', '$35.00', '$45.00', '$40.00']
+2021-08-26 19:32:34,833 - root - INFO - $45.00 Black crossed arrows Hat on arid multicam flex fit
+$45.00
+2021-08-26 19:32:37,084 - root - INFO - On page: https://www.halffaceblades.com/collections/apparel/products/black-crossed-arrows-hat-on-arid-multicam-flex-fit
+2021-08-26 19:32:37,159 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:32:37,323 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:32:37,603 - root - INFO - Found Elements with text: ['Add to Cart']
+2021-08-26 19:32:37,669 - root - INFO - Clicking button
+2021-08-26 19:32:37,771 - root - INFO - Clicked Locator(by='id', value='AddToCart')
+2021-08-26 19:32:37,771 - root - INFO - Inside error handler
+2021-08-26 19:32:39,822 - root - INFO - Inside exception
+2021-08-26 19:32:39,822 - root - INFO - Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
+  (Session info: chrome=92.0.4515.159)
+
+2021-08-26 19:32:39,822 - root - INFO - On page: https://www.halffaceblades.com/cart
+2021-08-26 19:32:44,478 - root - ERROR - Failed to find element
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 130, in go_to_apparel
+    badge = item.find_element_by_xpath(".//span[@class='badge__text']")
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 351, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//span[@class='badge__text']"}
+  (Session info: chrome=92.0.4515.159)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 109, in add_to_cart
+    stock_error = self.driver.find_element_by_xpath("//p[contains(@class, 'errors')]")
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
+  (Session info: chrome=92.0.4515.159)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
+    elements = WebDriverWait(self.driver, 3).until(
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-08-26 19:32:47,667 - root - WARNING - Message: 
+
+2021-08-26 19:32:47,667 - root - INFO - going to complete shipping information
+2021-08-26 19:32:47,763 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:32:47,826 - root - INFO - Clicking input
+2021-08-26 19:32:56,760 - root - INFO - Clicked Locator(by='xpath', value='/html/body/main/div/div/form/div[4]/div/div/input[2]')
+2021-08-26 19:32:56,835 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/2dd08ef625aada5b4d1382e0e3b713e9?_ga=2.69493200.1360093017.1629999138-1019239832.1629999138
+2021-08-26 19:33:02,793 - root - ERROR - Failed to find element
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 130, in go_to_apparel
+    badge = item.find_element_by_xpath(".//span[@class='badge__text']")
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 351, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//span[@class='badge__text']"}
+  (Session info: chrome=92.0.4515.159)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 109, in add_to_cart
+    stock_error = self.driver.find_element_by_xpath("//p[contains(@class, 'errors')]")
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
+  (Session info: chrome=92.0.4515.159)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
+    elements = WebDriverWait(self.driver, 3).until(
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-08-26 19:33:05,970 - root - WARNING - Message: 
+
+2021-08-26 19:33:06,052 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:06,436 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:06,776 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:07,095 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:07,238 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:07,586 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:07,938 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:08,335 - root - INFO - Found Elements with text: ['Germany', 'Germany']
+2021-08-26 19:33:08,428 - root - INFO - Clicking option
+2021-08-26 19:33:08,530 - root - INFO - Clicked Locator(by='xpath', value="//option[@value='Germany']")
+2021-08-26 19:33:08,636 - root - INFO - Found Elements with text: ['Continue to shipping']
+2021-08-26 19:33:08,744 - root - INFO - Clicking button
+2021-08-26 19:33:13,859 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/form/div[2]/button')
+2021-08-26 19:33:13,862 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/2dd08ef625aada5b4d1382e0e3b713e9?previous_step=contact_information&step=shipping_method
+2021-08-26 19:33:20,092 - root - ERROR - Failed to find element
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 130, in go_to_apparel
+    badge = item.find_element_by_xpath(".//span[@class='badge__text']")
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 351, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//span[@class='badge__text']"}
+  (Session info: chrome=92.0.4515.159)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 109, in add_to_cart
+    stock_error = self.driver.find_element_by_xpath("//p[contains(@class, 'errors')]")
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
+  (Session info: chrome=92.0.4515.159)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
+    elements = WebDriverWait(self.driver, 3).until(
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-08-26 19:33:23,282 - root - WARNING - Message: 
+
+2021-08-26 19:33:23,292 - root - INFO - On url 444:https://www.halffaceblades.com/12593313/checkouts/2dd08ef625aada5b4d1382e0e3b713e9?previous_step=contact_information&step=shipping_method
+2021-08-26 19:33:28,373 - root - INFO - Found Elements with text: ['Continue to payment']
+2021-08-26 19:33:28,445 - root - INFO - Clicking button
+2021-08-26 19:33:33,499 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/form/div[2]/button')
+2021-08-26 19:33:33,543 - root - INFO - This is the url :https://www.halffaceblades.com/12593313/checkouts/2dd08ef625aada5b4d1382e0e3b713e9?previous_step=shipping_method&step=payment_method
+2021-08-26 19:33:33,559 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/2dd08ef625aada5b4d1382e0e3b713e9?previous_step=shipping_method&step=payment_method
+2021-08-26 19:33:40,495 - root - ERROR - Failed to find element
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 130, in go_to_apparel
+    badge = item.find_element_by_xpath(".//span[@class='badge__text']")
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 351, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//span[@class='badge__text']"}
+  (Session info: chrome=92.0.4515.159)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 109, in add_to_cart
+    stock_error = self.driver.find_element_by_xpath("//p[contains(@class, 'errors')]")
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
+  (Session info: chrome=92.0.4515.159)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
+    elements = WebDriverWait(self.driver, 3).until(
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-08-26 19:33:43,666 - root - WARNING - Message: 
+
+2021-08-26 19:33:43,678 - root - INFO - 
+
+
+ https://www.halffaceblades.com/12593313/checkouts/2dd08ef625aada5b4d1382e0e3b713e9?previous_step=shipping_method&step=payment_method
+https://www.halffaceblades.com/12593313/checkouts/2dd08ef625aada5b4d1382e0e3b713e9?previous_step=shipping_method&step=payment_method
+
+2021-08-26 19:33:43,841 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:44,196 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:44,451 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:44,781 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:45,140 - root - INFO - Found Elements with text: ['']
+2021-08-26 19:33:45,256 - root - INFO - Clicking div
+2021-08-26 19:33:45,388 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/div/form/div[2]/div[2]/fieldset/div[1]/div')
+2021-08-26 19:33:45,488 - root - INFO - Found Elements with text: ['Pay now']
+2021-08-26 19:33:45,597 - root - INFO - Clicking button
+2021-08-26 19:33:45,708 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/div/form/div[3]/div[1]/button')
+2021-08-26 19:33:45,709 - root - INFO - Clinked something
+2021-08-26 19:33:45,718 - root - INFO - This is the url :https://www.halffaceblades.com/12593313/checkouts/2dd08ef625aada5b4d1382e0e3b713e9?previous_step=shipping_method&step=payment_method
+2021-08-26 19:33:45,718 - root - INFO - Completed shipping information
