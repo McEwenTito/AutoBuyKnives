@@ -146,14 +146,8 @@ class AutoDriver:
                 return True
             else:
                 return False
-                item.click()
-                self.add_to_cart(self.driver.current_url, config.QUANTITY)
-                logging.info("On else" + self.driver.current_url)
         except:
             return False
-            item.click()
-            self.add_to_cart(self.driver.current_url, config.QUANTITY)
-            logging.info("On except" + self.driver.current_url)
 
 
     def select_expensive_product(self, url):
@@ -164,28 +158,10 @@ class AutoDriver:
             price = description.text[description.text.rfind("$")+1:]
             item = description.find_element_by_xpath("..")
             if not self.sold_out(item, prices) and (float(price)) == max(prices):
-                item = description.find_element_by_xpath("..")
                 logging.info(description.text + " " + item.text)
                 item.click()
                 self.add_to_cart(self.driver.current_url, config.QUANTITY)
-
-                # try:
-                #     badge = item.find_element_by_xpath(".//span[@class='badge__text']")
-                #     logging.info("Badge : " + badge.text)
-                #     if "SOLD" in badge.text:
-                #         logging.info("This item is sold out")
-                #         continue
-                #     else:
-                #         item.click()
-                #         self.add_to_cart(self.driver.current_url, config.QUANTITY)
-                #         logging.info("On else" + self.driver.current_url)
-                #
-                # except:
-                #     item.click()
-                #     self.add_to_cart(self.driver.current_url, config.QUANTITY)
-                #     break
-                #     logging.info("On except" + self.driver.current_url)
-
+                break
             else:
                 continue
 
@@ -200,7 +176,7 @@ class AutoDriver:
     def login(self):
         login_page = LoginPage(self.driver, url=urls.LOGIN)
         login_page.go()
-        time.sleep(2)
+        time.sleep(1)
         login_page.email_field.input_text(config.EMAIL)
         login_page.password_field.input_text(config.PASSWORD)
         login_page.sign_in.click()
