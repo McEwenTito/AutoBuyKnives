@@ -6,12 +6,21 @@ from pages.base_page import BasePage
 from settings import locators
 
 
+class NonClearElement(BaseElement):
+
+    def input_card_text(self, text):
+        self.web_element.send_keys(text)
+        return None
+
+
+
+
 class PaymentMethodPage(BasePage):
 
     @property
     def card_number(self):
         locator = Locator(by=By.XPATH, value=locators.CARD_NUMBER)
-        return BaseElement(self.driver, locator)
+        return NonClearElement(self.driver, locator)
 
     @property
     def name_on_card(self):
@@ -21,7 +30,7 @@ class PaymentMethodPage(BasePage):
     @property
     def expiration(self):
         locator = Locator(by=By.XPATH, value=locators.EXPIRATION)
-        return BaseElement(self.driver, locator)
+        return NonClearElement(self.driver, locator)
 
     def security_code(self):
         locator = Locator(by=By.XPATH, value=locators.SECURITY_CODE)

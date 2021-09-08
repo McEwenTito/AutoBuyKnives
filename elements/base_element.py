@@ -15,7 +15,7 @@ class BaseElement(object):
 
     def find(self):
         try:
-            elements = WebDriverWait(self.driver, 3).until(
+            elements = WebDriverWait(self.driver, 0).until(
                 EC.visibility_of_all_elements_located(locator=self.locator)
             )
             element = elements[0]
@@ -34,7 +34,7 @@ class BaseElement(object):
         return None
 
     def click(self):
-        element = WebDriverWait(self.driver, 3).until(
+        element = WebDriverWait(self.driver, 0).until(
             EC.element_to_be_clickable(locator=self.locator)
         )
         logging.info("Clicking " + element.tag_name)

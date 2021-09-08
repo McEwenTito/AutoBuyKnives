@@ -5,9 +5,9 @@ from pages.base_page import BasePage
 from settings import urls, locators
 from elements.base_element import BaseElement
 
-class ApparelPage(BasePage):
+class ProductPage(BasePage):
 
-    url = urls.APPAREL
+    # url = urls.APPAREL
 
     @property
     def available_items(self):
@@ -16,7 +16,7 @@ class ApparelPage(BasePage):
 
 
     @property
-    def prices(self):
+    def descriptions(self):
         locator = Locator(by=By.XPATH, value=locators.PRICE)
         return BaseElement(self.driver, locator)
 

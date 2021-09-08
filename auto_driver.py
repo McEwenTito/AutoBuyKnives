@@ -7,7 +7,7 @@ from pages.landing_page import LandingPage
 from pages.login_page import LoginPage
 from pages.add_to_cart import AddToCartPage
 from pages.payment_method import PaymentMethodPage
-from pages.apparel_page import ApparelPage
+from pages.product_page import ProductPage
 from pages.checkout import CheckoutPage
 from pages.shipping import ShippingPage, ShippingMethodPage
 from settings import config, locators
@@ -18,6 +18,7 @@ chrome_options = webdriver.ChromeOptions()
 prefs = {"profile.default_content_setting_values.notifications": 2}
 chrome_options.add_experimental_option("prefs", prefs)
 chrome_options.add_argument("start-maximized");
+# chrome_options.add_argument("headless");
 
 
 class AutoDriver:
@@ -31,7 +32,7 @@ class AutoDriver:
 
     def complete_shipping_info(self, url):
         shipping_page = ShippingPage(self.driver, url)
-        shipping_page.go()
+        # shipping_page.go()
         shipping_page.first_name.input_text(config.FIRST_NAME)
         shipping_page.last_name.input_text(config.LAST_NAME)
         shipping_page.company.input_text(config.COMPANY)
@@ -47,11 +48,14 @@ class AutoDriver:
 
     def complete_payment_info(self, url):
         payment_method_page = PaymentMethodPage(self.driver, url)
-        payment_method_page.go()
+        # payment_method_page.go()
         logging.info("\n\n\n " + url + "\n" + self.driver.current_url + "\n")
         iframe = self.driver.find_element_by_xpath(locators.IFRAME_CARD_NUMBER)
         self.driver.switch_to.frame(iframe)
-        payment_method_page.card_number.input_text(config.CARD_NUMBER)
+        payment_method_page.card_number.input_card_text(config.CARD_NUMBER_1)
+        payment_method_page.card_number.input_card_text(config.CARD_NUMBER_2)
+        payment_method_page.card_number.input_card_text(config.CARD_NUMBER_3)
+        payment_method_page.card_number.input_card_text(config.CARD_NUMBER_4)
         self.driver.switch_to.parent_frame()
         iframe = self.driver.find_element_by_xpath(locators.IFRAME_CARD_NAME)
         self.driver.switch_to.frame(iframe)
@@ -59,7 +63,8 @@ class AutoDriver:
         self.driver.switch_to.parent_frame()
         iframe = self.driver.find_element_by_xpath(locators.IFRAME_CARD_EXPIRATION)
         self.driver.switch_to.frame(iframe)
-        payment_method_page.expiration.input_text(config.EXPIRATION_DATE)
+        payment_method_page.expiration.input_card_text(config.EXPIRATION_DATE_1)
+        payment_method_page.expiration.input_card_text(config.EXPIRATION_DATE_2)
         self.driver.switch_to.parent_frame()
         iframe = self.driver.find_element_by_xpath(locators.IFRAME_SECURITY_CODE)
         self.driver.switch_to.frame(iframe)
@@ -71,9 +76,9 @@ class AutoDriver:
 
     def choose_shipping_method(self, url):
         shipping_method_page = ShippingMethodPage(self.driver, url=url)
-        shipping_method_page.go()
+        # shipping_method_page.go()
         logging.info("On url 444:" + self.driver.current_url)
-        time.sleep(5)
+        time.sleep(1)
         shipping_method_page.continue_to_payment.click()
         logging.info("This is the url :" + self.driver.current_url)
         self.complete_payment_info(self.driver.current_url)
@@ -91,8 +96,8 @@ class AutoDriver:
             self.complete_shipping_info(self.driver.current_url)
             logging.info("Completed shipping information")
         except:
-            logging.info("FAiled t o hahah")
-            time.sleep(2)
+            logging.info("FAiled to hahah")
+            time.sleep(1)
             checkout_page.go()
             checkout_page.checkout.click()
             self.complete_shipping_info(self.driver.current_url)
@@ -105,7 +110,7 @@ class AutoDriver:
         add_to_cart_page.add_to_cart_button.click()
         try:
             logging.info("Inside error handler")
-            time.sleep(2)
+            time.sleep(1)
             stock_error = self.driver.find_element_by_xpath("//p[contains(@class, 'errors')]")
             stock_error = stock_error.text
             logging.info("Stock Error: " + stock_error)
@@ -115,33 +120,76 @@ class AutoDriver:
             add_to_cart_page.add_to_cart_button.click()
             self.checkout()
         except Exception as e:
-            logging.info("Inside exception")
-            logging.info(e)
+            logging.exception(e)
             self.checkout()
 
-    def go_to_apparel(self):
-        apparel_page = ApparelPage(self.driver, url=urls.APPAREL)
-        apparel_page.go()
-        for price in apparel_page.prices.web_elements:
-            if float(price.text[1:]) >= config.MIN_AMOUNT:
-                item = price.find_element_by_xpath("..")
-                logging.info(price.text + " " + item.text)
-                try:
-                    badge = item.find_element_by_xpath(".//span[@class='badge__text']")
-                    logging.info("Badge : " + badge.text)
-                    if "SOLD" in badge.text:
-                        logging.info("This item is sold out")
-                        continue
-                    else:
-                        item.click()
-                        self.add_to_cart(self.driver.current_url, 5)
-                        logging.info("On else" + self.driver.current_url)
 
-                except:
-                    item.click()
-                    self.add_to_cart(self.driver.current_url, 5)
-                    break
-                    logging.info("On except" + self.driver.current_url)
+    @classmethod
+    def get_product_prices(cls, product_page) -> []:
+        prices = []
+        ###  Look for $ then float hahaha you super genius you
+        for description in product_page.descriptions.web_elements:
+            logging.info(description.text)
+            price = description.text[description.text.rfind("$")+1:]
+            prices.append(float(price))
+        logging.info(f"All prices {prices}")
+        return prices
+
+
+    def sold_out(self, item, prices) -> bool:
+        try:
+            badge = item.find_element_by_xpath(".//span[@class='badge__text']")
+            logging.info("Badge : " + badge.text)
+            if "SOLD" in badge.text:
+                logging.info("This item is sold out")
+                prices.remove(max(prices))
+                return True
+            else:
+                return False
+                item.click()
+                self.add_to_cart(self.driver.current_url, config.QUANTITY)
+                logging.info("On else" + self.driver.current_url)
+        except:
+            return False
+            item.click()
+            self.add_to_cart(self.driver.current_url, config.QUANTITY)
+            logging.info("On except" + self.driver.current_url)
+
+
+    def select_expensive_product(self, url):
+        product_page = ProductPage(self.driver, url=url)
+        product_page.go()
+        prices = self.get_product_prices(product_page=product_page)
+        for description in product_page.descriptions.web_elements:
+            price = description.text[description.text.rfind("$")+1:]
+            item = description.find_element_by_xpath("..")
+            if not self.sold_out(item, prices) and (float(price)) == max(prices):
+                item = description.find_element_by_xpath("..")
+                logging.info(description.text + " " + item.text)
+                item.click()
+                self.add_to_cart(self.driver.current_url, config.QUANTITY)
+
+                # try:
+                #     badge = item.find_element_by_xpath(".//span[@class='badge__text']")
+                #     logging.info("Badge : " + badge.text)
+                #     if "SOLD" in badge.text:
+                #         logging.info("This item is sold out")
+                #         continue
+                #     else:
+                #         item.click()
+                #         self.add_to_cart(self.driver.current_url, config.QUANTITY)
+                #         logging.info("On else" + self.driver.current_url)
+                #
+                # except:
+                #     item.click()
+                #     self.add_to_cart(self.driver.current_url, config.QUANTITY)
+                #     break
+                #     logging.info("On except" + self.driver.current_url)
+
+            else:
+                continue
+
+
 
 
     def start(self):
@@ -152,7 +200,7 @@ class AutoDriver:
     def login(self):
         login_page = LoginPage(self.driver, url=urls.LOGIN)
         login_page.go()
-        time.sleep(5)
+        time.sleep(2)
         login_page.email_field.input_text(config.EMAIL)
         login_page.password_field.input_text(config.PASSWORD)
         login_page.sign_in.click()
