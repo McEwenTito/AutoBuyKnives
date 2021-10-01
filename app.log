@@ -1,14 +1,14 @@
-2021-09-08 21:24:16,436 - root - INFO - On page: https://www.halffaceblades.com/account/login
-2021-09-08 21:24:20,260 - root - INFO - Found Elements with text: ['×']
-2021-09-08 21:24:20,289 - root - INFO - Clicking button
-2021-09-08 21:24:20,322 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div[2]/div/div[1]/div/button')
-2021-09-08 21:24:21,369 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:21,445 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:21,517 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:21,538 - root - INFO - Clicking input
-2021-09-08 21:24:24,002 - root - INFO - Clicked Locator(by='xpath', value='/html/body/main/div/div/div/div/div[2]/form/p[2]/input')
-2021-09-08 21:24:24,002 - root - INFO - On page: https://www.halffaceblades.com/collections/apparel
-2021-09-08 21:24:25,587 - root - ERROR - Failed to find element
+2021-09-27 17:40:02,888 - root - INFO - On page: https://www.halffaceblades.com/account/login
+2021-09-27 17:40:08,114 - root - INFO - Found Elements with text: ['×']
+2021-09-27 17:40:08,192 - root - INFO - Clicking button
+2021-09-27 17:40:08,247 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div[2]/div/div[1]/div/button')
+2021-09-27 17:40:09,372 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:09,504 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:09,695 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:09,762 - root - INFO - Clicking input
+2021-09-27 17:40:11,477 - root - INFO - Clicked Locator(by='xpath', value='/html/body/main/div/div/div/div/div[2]/form/p[2]/input')
+2021-09-27 17:40:11,477 - root - INFO - On page: https://www.halffaceblades.com/collections/sheaths-and-trainers
+2021-09-27 17:40:14,471 - root - ERROR - Failed to find element
 Traceback (most recent call last):
   File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
     elements = WebDriverWait(self.driver, 0).until(
@@ -16,37 +16,38 @@ Traceback (most recent call last):
     raise TimeoutException(message, screen, stacktrace)
 selenium.common.exceptions.TimeoutException: Message: 
 
-2021-09-08 21:24:26,102 - root - WARNING - Message: 
+2021-09-27 17:40:14,994 - root - WARNING - Message: 
 
-2021-09-08 21:24:26,303 - root - INFO - Found Elements with text: ['$45.00', '$35.00', '$35.00', '$35.00', '$35.00', '$45.00', '$40.00', '$35.00', '$35.00', '$50.00', '$45.00']
-2021-09-08 21:24:26,308 - root - INFO - $45.00
-2021-09-08 21:24:26,319 - root - INFO - $35.00
-2021-09-08 21:24:26,332 - root - INFO - $35.00
-2021-09-08 21:24:26,345 - root - INFO - $35.00
-2021-09-08 21:24:26,357 - root - INFO - $35.00
-2021-09-08 21:24:26,368 - root - INFO - $45.00
-2021-09-08 21:24:26,379 - root - INFO - $40.00
-2021-09-08 21:24:26,391 - root - INFO - $35.00
-2021-09-08 21:24:26,403 - root - INFO - $35.00
-2021-09-08 21:24:26,416 - root - INFO - $50.00
-2021-09-08 21:24:26,428 - root - INFO - $45.00
-2021-09-08 21:24:26,436 - root - INFO - All prices [45.0, 35.0, 35.0, 35.0, 35.0, 45.0, 40.0, 35.0, 35.0, 50.0, 45.0]
-2021-09-08 21:24:26,586 - root - INFO - Found Elements with text: ['$45.00', '$35.00', '$35.00', '$35.00', '$35.00', '$45.00', '$40.00', '$35.00', '$35.00', '$50.00', '$45.00']
-2021-09-08 21:24:26,637 - root - INFO - Badge : SOLD OUT
-2021-09-08 21:24:26,641 - root - INFO - This item is sold out
-2021-09-08 21:24:26,692 - root - INFO - Badge : SOLD OUT
-2021-09-08 21:24:26,696 - root - INFO - This item is sold out
-2021-09-08 21:24:26,762 - root - INFO - $45.00 Rash guard short sleeve, HFB scalper, Canoe Club USA, KBD logos
+2021-09-27 17:40:15,693 - root - INFO - Found Elements with text: ['$45.00', '$45.00', '$10.00', 'From $12.00', '$45.00', '$15.00', '$45.00', '$50.00', '$15.00', '$45.00', '$45.00', '$45.00', '$35.00', '$45.00']
+2021-09-27 17:40:15,704 - root - INFO - $45.00
+2021-09-27 17:40:15,737 - root - INFO - $45.00
+2021-09-27 17:40:15,770 - root - INFO - $10.00
+2021-09-27 17:40:15,809 - root - INFO - From $12.00
+2021-09-27 17:40:15,841 - root - INFO - $45.00
+2021-09-27 17:40:15,860 - root - INFO - $15.00
+2021-09-27 17:40:15,880 - root - INFO - $45.00
+2021-09-27 17:40:15,898 - root - INFO - $50.00
+2021-09-27 17:40:15,918 - root - INFO - $15.00
+2021-09-27 17:40:15,936 - root - INFO - $45.00
+2021-09-27 17:40:15,958 - root - INFO - $45.00
+2021-09-27 17:40:15,978 - root - INFO - $45.00
+2021-09-27 17:40:15,996 - root - INFO - $35.00
+2021-09-27 17:40:16,018 - root - INFO - $45.00
+2021-09-27 17:40:16,047 - root - INFO - All prices [45.0, 45.0, 10.0, 12.0, 45.0, 15.0, 45.0, 50.0, 15.0, 45.0, 45.0, 45.0, 35.0, 45.0]
+2021-09-27 17:40:16,408 - root - INFO - Found Elements with text: ['$45.00', '$45.00', '$10.00', 'From $12.00', '$45.00', '$15.00', '$45.00', '$50.00', '$15.00', '$45.00', '$45.00', '$45.00', '$35.00', '$45.00']
+2021-09-27 17:40:16,608 - root - INFO - Badge : SOLD OUT
+2021-09-27 17:40:16,621 - root - INFO - This item is sold out
+2021-09-27 17:40:16,793 - root - INFO - $45.00 (Leather sheath) For Crow jr, Disaster jr, Red Cloud, tanto, Ryu, Kensof, size leather sheaths, 6"-8"overall length, 3.25"-4" blade
 $45.00
-2021-09-08 21:24:28,759 - root - INFO - On page: https://www.halffaceblades.com/collections/apparel/products/rash-guard-short-sleeve-hfb-scalper-canoe-club-usa-wekbd-logos
-2021-09-08 21:24:28,783 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:28,821 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:28,883 - root - INFO - Found Elements with text: ['Add to Cart']
-2021-09-08 21:24:28,902 - root - INFO - Clicking button
-2021-09-08 21:24:28,932 - root - INFO - Clicked Locator(by='id', value='AddToCart')
-2021-09-08 21:24:28,933 - root - INFO - Inside error handler
-2021-09-08 21:24:29,949 - root - ERROR - Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
-  (Session info: chrome=92.0.4515.159)
+2021-09-27 17:40:22,364 - root - INFO - On page: https://www.halffaceblades.com/collections/sheaths-and-trainers/products/crow-junior-hunter-skinner-size-blades-saddle-leather-sheath
+2021-09-27 17:40:22,435 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:22,572 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:22,727 - root - INFO - Found Elements with text: ['Add to Cart']
+2021-09-27 17:40:22,767 - root - INFO - Clicking button
+2021-09-27 17:40:22,805 - root - INFO - Clicked Locator(by='id', value='AddToCart')
+2021-09-27 17:40:22,805 - root - INFO - Inside error handler
+2021-09-27 17:40:23,879 - root - ERROR - Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
+  (Session info: chrome=94.0.4606.54)
 Traceback (most recent call last):
   File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 114, in add_to_cart
     stock_error = self.driver.find_element_by_xpath("//p[contains(@class, 'errors')]")
@@ -59,10 +60,10 @@ Traceback (most recent call last):
   File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
     raise exception_class(message, screen, stacktrace)
 selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
-  (Session info: chrome=92.0.4515.159)
+  (Session info: chrome=94.0.4606.54)
 
-2021-09-08 21:24:29,970 - root - INFO - On page: https://www.halffaceblades.com/cart
-2021-09-08 21:24:31,539 - root - ERROR - Failed to find element
+2021-09-27 17:40:23,884 - root - INFO - On page: https://www.halffaceblades.com/cart
+2021-09-27 17:40:26,519 - root - ERROR - Failed to find element
 Traceback (most recent call last):
   File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\auto_driver.py", line 114, in add_to_cart
     stock_error = self.driver.find_element_by_xpath("//p[contains(@class, 'errors')]")
@@ -75,7 +76,7 @@ Traceback (most recent call last):
   File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
     raise exception_class(message, screen, stacktrace)
 selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(@class, 'errors')]"}
-  (Session info: chrome=92.0.4515.159)
+  (Session info: chrome=94.0.4606.54)
 
 
 During handling of the above exception, another exception occurred:
@@ -87,53 +88,53 @@ Traceback (most recent call last):
     raise TimeoutException(message, screen, stacktrace)
 selenium.common.exceptions.TimeoutException: Message: 
 
-2021-09-08 21:24:32,069 - root - WARNING - Message: 
+2021-09-27 17:40:27,045 - root - WARNING - Message: 
 
-2021-09-08 21:24:32,069 - root - INFO - going to complete shipping information
-2021-09-08 21:24:32,102 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:32,130 - root - INFO - Clicking input
-2021-09-08 21:24:36,116 - root - INFO - Clicked Locator(by='xpath', value='/html/body/main/div/div/form/div[4]/div/div/input[2]')
-2021-09-08 21:24:36,119 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/01187d3ca337757083a4361d87ddd344?_ga=2.138975603.1391798873.1631129060-885062960.1631129060
-2021-09-08 21:24:36,147 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:36,252 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:36,352 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:36,460 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:36,560 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:36,654 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:36,761 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:36,869 - root - INFO - Found Elements with text: ['United States', 'United States']
-2021-09-08 21:24:36,893 - root - INFO - Clicking option
-2021-09-08 21:24:36,913 - root - INFO - Clicked Locator(by='xpath', value="//option[@value='United States']")
-2021-09-08 21:24:36,936 - root - INFO - Found Elements with text: ['Continue to shipping']
-2021-09-08 21:24:36,962 - root - INFO - Clicking button
-2021-09-08 21:24:40,177 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/form/div[2]/button')
-2021-09-08 21:24:40,179 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/01187d3ca337757083a4361d87ddd344?previous_step=contact_information&step=shipping_method
-2021-09-08 21:24:40,181 - root - INFO - On url 444:https://www.halffaceblades.com/12593313/checkouts/01187d3ca337757083a4361d87ddd344?previous_step=contact_information&step=shipping_method
-2021-09-08 21:24:41,272 - root - INFO - Found Elements with text: ['Continue to payment']
-2021-09-08 21:24:41,296 - root - INFO - Clicking button
-2021-09-08 21:24:45,132 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/form/div[2]/button')
-2021-09-08 21:24:45,134 - root - INFO - This is the url :https://www.halffaceblades.com/12593313/checkouts/01187d3ca337757083a4361d87ddd344?previous_step=shipping_method&step=payment_method
-2021-09-08 21:24:45,135 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/01187d3ca337757083a4361d87ddd344?previous_step=shipping_method&step=payment_method
-2021-09-08 21:24:45,137 - root - INFO - 
+2021-09-27 17:40:27,045 - root - INFO - going to complete shipping information
+2021-09-27 17:40:27,106 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:27,192 - root - INFO - Clicking input
+2021-09-27 17:40:35,183 - root - INFO - Clicked Locator(by='xpath', value='/html/body/main/div/div/form/div[4]/div/div/input[2]')
+2021-09-27 17:40:35,193 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/5813494f06abd8f09c6717a202f443b2?_ga=2.78718036.1543390761.1632757208-2093882149.1632757208
+2021-09-27 17:40:35,263 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:35,562 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:35,839 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:36,069 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:36,212 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:36,355 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:36,512 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:36,727 - root - INFO - Found Elements with text: ['United States', 'United States']
+2021-09-27 17:40:36,760 - root - INFO - Clicking option
+2021-09-27 17:40:36,790 - root - INFO - Clicked Locator(by='xpath', value="//option[@value='United States']")
+2021-09-27 17:40:36,849 - root - INFO - Found Elements with text: ['Continue to shipping']
+2021-09-27 17:40:36,915 - root - INFO - Clicking button
+2021-09-27 17:40:41,168 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/form/div[2]/button')
+2021-09-27 17:40:41,170 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/5813494f06abd8f09c6717a202f443b2?previous_step=contact_information&step=shipping_method
+2021-09-27 17:40:41,173 - root - INFO - On url 444:https://www.halffaceblades.com/12593313/checkouts/5813494f06abd8f09c6717a202f443b2?previous_step=contact_information&step=shipping_method
+2021-09-27 17:40:42,292 - root - INFO - Found Elements with text: ['Continue to payment']
+2021-09-27 17:40:42,364 - root - INFO - Clicking button
+2021-09-27 17:40:49,138 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/form/div[2]/button')
+2021-09-27 17:40:49,147 - root - INFO - This is the url :https://www.halffaceblades.com/12593313/checkouts/5813494f06abd8f09c6717a202f443b2?previous_step=shipping_method&step=payment_method
+2021-09-27 17:40:49,154 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/5813494f06abd8f09c6717a202f443b2?previous_step=shipping_method&step=payment_method
+2021-09-27 17:40:49,161 - root - INFO - 
 
 
- https://www.halffaceblades.com/12593313/checkouts/01187d3ca337757083a4361d87ddd344?previous_step=shipping_method&step=payment_method
-https://www.halffaceblades.com/12593313/checkouts/01187d3ca337757083a4361d87ddd344?previous_step=shipping_method&step=payment_method
+ https://www.halffaceblades.com/12593313/checkouts/5813494f06abd8f09c6717a202f443b2?previous_step=shipping_method&step=payment_method
+https://www.halffaceblades.com/12593313/checkouts/5813494f06abd8f09c6717a202f443b2?previous_step=shipping_method&step=payment_method
 
-2021-09-08 21:24:45,182 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,253 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,300 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,342 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,414 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,551 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,602 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,668 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,751 - root - INFO - Found Elements with text: ['']
-2021-09-08 21:24:45,776 - root - INFO - Clicking div
-2021-09-08 21:24:45,820 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/div/form/div[2]/div[2]/fieldset/div[1]/div')
-2021-09-08 21:24:45,865 - root - INFO - Found Elements with text: ['Pay now']
-2021-09-08 21:24:45,889 - root - INFO - Clicking button
-2021-09-08 21:24:45,929 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/div/form/div[3]/div[1]/button')
-2021-09-08 21:24:45,929 - root - INFO - Clinked something
-2021-09-08 21:24:45,932 - root - INFO - This is the url :https://www.halffaceblades.com/12593313/checkouts/01187d3ca337757083a4361d87ddd344?previous_step=shipping_method&step=payment_method
-2021-09-08 21:24:45,932 - root - INFO - Completed shipping information
+2021-09-27 17:40:49,317 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:49,517 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:49,571 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:49,616 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:49,701 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:49,881 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:50,003 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:50,151 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:50,358 - root - INFO - Found Elements with text: ['']
+2021-09-27 17:40:50,418 - root - INFO - Clicking div
+2021-09-27 17:40:50,521 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/div/form/div[2]/div[2]/fieldset/div[1]/div')
+2021-09-27 17:40:50,596 - root - INFO - Found Elements with text: ['Pay now']
+2021-09-27 17:40:50,648 - root - INFO - Clicking button
+2021-09-27 17:40:50,738 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/div/form/div[3]/div[1]/button')
+2021-09-27 17:40:50,739 - root - INFO - Clinked something
+2021-09-27 17:40:50,747 - root - INFO - This is the url :https://www.halffaceblades.com/12593313/checkouts/5813494f06abd8f09c6717a202f443b2?previous_step=shipping_method&step=payment_method
+2021-09-27 17:40:50,747 - root - INFO - Completed shipping information
