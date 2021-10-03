@@ -123,6 +123,12 @@ class AutoDriver:
             logging.exception(e)
             self.checkout()
 
+    #remove commas in price
+    @classmethod
+    def sanitize_price(cls, price):
+        return price.replace(",", "")
+
+
 
     @classmethod
     def get_product_prices(cls, product_page) -> []:
@@ -131,7 +137,7 @@ class AutoDriver:
         for description in product_page.descriptions.web_elements:
             logging.info(description.text)
             price = description.text[description.text.rfind("$")+1:]
-            prices.append(float(price))
+            prices.append(float(cls.sanitize_price(price=price)))
         logging.info(f"All prices {prices}")
         return prices
 
