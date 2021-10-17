@@ -5,7 +5,7 @@ from settings import urls
 if __name__ == '__main__':
     auto_driver = AutoDriver()
     auto_driver.login()
-    auto_driver.select_expensive_product(urls.KNIVES)
+    auto_driver.select_expensive_product(urls.ACCESSORIES)
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

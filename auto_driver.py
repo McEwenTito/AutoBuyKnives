@@ -3,6 +3,8 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+
 from pages.landing_page import LandingPage
 from pages.login_page import LoginPage
 from pages.add_to_cart import AddToCartPage
@@ -123,54 +125,49 @@ class AutoDriver:
             logging.exception(e)
             self.checkout()
 
-    #remove commas in price
+
     @classmethod
     def sanitize_price(cls, price):
         return price.replace(",", "")
 
+    @classmethod
+    def hover(cls, product_page, product):
+        a = ActionChains(product_page.driver)
+        a.move_to_element(product).perform()
 
 
     @classmethod
     def get_product_prices(cls, product_page) -> []:
-        prices = []
-        ###  Look for $ then float hahaha you super genius you
-        for description in product_page.descriptions.web_elements:
-            logging.info(description.text)
-            price = description.text[description.text.rfind("$")+1:]
-            prices.append(float(cls.sanitize_price(price=price)))
+        prices = {}
+        #  Mind the hover
+        #  Look for $ then float hahaha you super genius you
+        for product in product_page.available_items.web_elements:
+            cls.hover(product_page, product)
+            print(product.text)
+            logging.info(product.text)
+            price = product.text[product.text.rfind("$")+1:]
+            try:
+                prices[product] = float(cls.sanitize_price(price))
+            except ValueError:
+                logging.warning("Did not find price. Product could be sold out")
+                continue
         logging.info(f"All prices {prices}")
         return prices
 
-
-    def sold_out(self, item, prices) -> bool:
-        try:
-            badge = item.find_element_by_xpath(".//span[@class='badge__text']")
-            logging.info("Badge : " + badge.text)
-            if "SOLD" in badge.text:
-                logging.info("This item is sold out")
-                prices.remove(max(prices))
-                return True
-            else:
-                return False
-        except:
-            return False
 
 
     def select_expensive_product(self, url):
         product_page = ProductPage(self.driver, url=url)
         product_page.go()
-        prices = self.get_product_prices(product_page=product_page)
-        for description in product_page.descriptions.web_elements:
-            price = description.text[description.text.rfind("$")+1:]
-            item = description.find_element_by_xpath("..")
-            if not self.sold_out(item, prices) and (float(price)) == max(prices):
-                logging.info(description.text + " " + item.text)
-                item.click()
-                self.add_to_cart(self.driver.current_url, config.QUANTITY)
-                break
+        product_prices = self.get_product_prices(product_page=product_page)
+        print(f'{type(max(product_prices.values()))} {max(product_prices.values())}')
+        print(product_prices.values())
+        for product in product_prices:
+            print(f'{type(product_prices[product])}')
+            if product_prices[product] == min(product_prices.values()):
+                product.click()
             else:
-                continue
-
+                logging.info("not max")
 
 
 
