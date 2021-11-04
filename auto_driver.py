@@ -4,6 +4,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 from pages.landing_page import LandingPage
 from pages.login_page import LoginPage
@@ -14,6 +15,7 @@ from pages.checkout import CheckoutPage
 from pages.shipping import ShippingPage, ShippingMethodPage
 from settings import config, locators
 from settings import urls
+
 
 
 chrome_options = webdriver.ChromeOptions()
@@ -34,10 +36,10 @@ class AutoDriver:
 
     def complete_shipping_info(self, url):
         shipping_page = ShippingPage(self.driver, url)
-        # shipping_page.go()
-        shipping_page.first_name.input_text(config.FIRST_NAME)
-        shipping_page.last_name.input_text(config.LAST_NAME)
         shipping_page.company.input_text(config.COMPANY)
+        # shipping_page.go()
+        # shipping_page.first_name.input_text(config.FIRST_NAME)
+        # shipping_page.last_name.input_text(config.LAST_NAME)
         shipping_page.address.input_text(config.ADDRESS)
         shipping_page.apartment.input_text(config.APARTMENT)
         shipping_page.city.input_text(config.CITY)
@@ -50,30 +52,28 @@ class AutoDriver:
 
     def complete_payment_info(self, url):
         payment_method_page = PaymentMethodPage(self.driver, url)
-        # payment_method_page.go()
         logging.info("\n\n\n " + url + "\n" + self.driver.current_url + "\n")
-        iframe = self.driver.find_element_by_xpath(locators.IFRAME_CARD_NUMBER)
-        self.driver.switch_to.frame(iframe)
+        act = ActionChains(payment_method_page.driver)
         payment_method_page.card_number.input_card_text(config.CARD_NUMBER_1)
         payment_method_page.card_number.input_card_text(config.CARD_NUMBER_2)
         payment_method_page.card_number.input_card_text(config.CARD_NUMBER_3)
         payment_method_page.card_number.input_card_text(config.CARD_NUMBER_4)
-        self.driver.switch_to.parent_frame()
-        iframe = self.driver.find_element_by_xpath(locators.IFRAME_CARD_NAME)
-        self.driver.switch_to.frame(iframe)
-        payment_method_page.name_on_card.input_text(config.NAME_ON_CARD)
-        self.driver.switch_to.parent_frame()
-        iframe = self.driver.find_element_by_xpath(locators.IFRAME_CARD_EXPIRATION)
-        self.driver.switch_to.frame(iframe)
-        payment_method_page.expiration.input_card_text(config.EXPIRATION_DATE_1)
-        payment_method_page.expiration.input_card_text(config.EXPIRATION_DATE_2)
-        self.driver.switch_to.parent_frame()
-        iframe = self.driver.find_element_by_xpath(locators.IFRAME_SECURITY_CODE)
-        self.driver.switch_to.frame(iframe)
-        payment_method_page.security_code().input_text(config.SECURITY_CODE)
-        self.driver.switch_to.parent_frame()
-        payment_method_page.same_as_shipping.click()
-        payment_method_page.pay_now.click()
+        time.sleep(2)
+        act.send_keys(Keys.TAB)
+        # act.send_keys(Keys.TAB)
+        act.perform()
+        act.send_keys(config.NAME_ON_CARD).perform()
+
+        try:
+            payment_method_page.expiration.input_card_text(config.EXPIRATION_DATE_1)
+            payment_method_page.expiration.input_card_text(config.EXPIRATION_DATE_2)
+            payment_method_page.security_code.input_card_text(config.SECURITY_CODE)
+            payment_method_page.same_as_shipping.click()
+            payment_method_page.pay_now.click()
+        except Exception as e:
+            print("Except")
+            print(e)
+            pass
 
 
     def choose_shipping_method(self, url):
@@ -93,12 +93,15 @@ class AutoDriver:
         checkout_page = CheckoutPage(self.driver, urls.CART)
         checkout_page.go()
         try:
+            time.sleep(2)
             logging.info("going to complete shipping information")
             checkout_page.checkout.click()
             self.complete_shipping_info(self.driver.current_url)
             logging.info("Completed shipping information")
         except:
+
             logging.info("FAiled to hahah")
+            return
             time.sleep(1)
             checkout_page.go()
             checkout_page.checkout.click()
@@ -107,23 +110,9 @@ class AutoDriver:
 
     def add_to_cart(self, url, quantity):
         add_to_cart_page = AddToCartPage(self.driver, url)
-        add_to_cart_page.quantity.web_element.clear()
-        add_to_cart_page.quantity.input_text(quantity)
         add_to_cart_page.add_to_cart_button.click()
-        try:
-            logging.info("Inside error handler")
-            time.sleep(1)
-            stock_error = self.driver.find_element_by_xpath("//p[contains(@class, 'errors')]")
-            stock_error = stock_error.text
-            logging.info("Stock Error: " + stock_error)
-            add_to_cart_page.go()
-            add_to_cart_page.quantity.web_element.clear()
-            add_to_cart_page.quantity.input_text(stock_error[17:18])
-            add_to_cart_page.add_to_cart_button.click()
-            self.checkout()
-        except Exception as e:
-            logging.exception(e)
-            self.checkout()
+        time.sleep(2)
+        self.checkout()
 
 
     @classmethod
@@ -164,8 +153,9 @@ class AutoDriver:
         print(product_prices.values())
         for product in product_prices:
             print(f'{type(product_prices[product])}')
-            if product_prices[product] == min(product_prices.values()):
+            if product_prices[product] == max(product_prices.values()):
                 product.click()
+                self.add_to_cart(urls.CART, 1)
             else:
                 logging.info("not max")
 

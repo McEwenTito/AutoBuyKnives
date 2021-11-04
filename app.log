@@ -1,1 +1,167 @@
-2021-10-16 19:43:11,513 - root - INFO - On page: https://www.halffaceblades.com/account/login
+2021-11-04 22:03:52,675 - root - INFO - On page: https://www.halffaceblades.com/account/login
+2021-11-04 22:03:57,083 - root - ERROR - Failed to find element
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
+    elements = WebDriverWait(self.driver, 1).until(
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-11-04 22:03:58,204 - root - WARNING - Message: 
+
+2021-11-04 22:03:59,252 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:03:59,253 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="12d24a14-0d36-4ce2-828e-742f0a4d5f39")>
+2021-11-04 22:03:59,253 - root - INFO - sending text : mcewentito@gmail.com
+2021-11-04 22:03:59,381 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:03:59,382 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="1e31ac6e-31ab-418a-b4f7-ddd33d7d0cbf")>
+2021-11-04 22:03:59,382 - root - INFO - sending text : imation
+2021-11-04 22:03:59,491 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:03:59,523 - root - INFO - Clicking input
+2021-11-04 22:04:01,074 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div[4]/main/div/div/div[2]/form/p[1]/input')
+2021-11-04 22:04:01,074 - root - INFO - On page: https://www.halffaceblades.com/collections/sheaths-and-trainers
+2021-11-04 22:04:02,969 - root - ERROR - Failed to find element
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
+    elements = WebDriverWait(self.driver, 1).until(
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-11-04 22:04:04,043 - root - WARNING - Message: 
+
+2021-11-04 22:04:04,652 - root - INFO - Found Elements with text: ['', '', '(KYDEX SHEATH) - Additional\nRegular price\n$45', '', '', '', '', '', '', '', '', '', '']
+2021-11-04 22:04:04,983 - root - INFO - Truffle Hot sauce (CASE OF 12), HFB X Señor Lechuga collaboration sauce, Batch 5
+Regular price
+$250
+2021-11-04 22:04:05,349 - root - INFO - Truffle Reaper sauce, HFB X Señor Lechuga collaboration hot sauce, batch 5
+Regular price
+$25
+2021-11-04 22:04:05,706 - root - INFO - (KYDEX SHEATH) - Additional
+Regular price
+$45
+2021-11-04 22:04:06,056 - root - INFO - (Horizontal belt loops/carry straps) for kydex sheaths, 2 loops per set,
+Regular price
+$15
+2021-11-04 22:04:06,424 - root - INFO - Half face velcro patch
+Regular price
+$10
+2021-11-04 22:04:06,792 - root - INFO - 45 degree angle leather sheath, fits knives with 3"-4" blade length,
+Regular price
+$45
+2021-11-04 22:04:07,190 - root - INFO - (Leather sheath) For Disaster breacher, widowmaker, size leather sheath, wider knives, 9"-10" oa, 4-5" blade
+Regular price
+$45
+2021-11-04 22:04:07,614 - root - INFO - (Leather sheath) For Crow jr, Disaster jr, Red Cloud, tanto, Kensof, fits 6"-8"overall length, 3"-4" blade
+Regular price
+$45
+2021-11-04 22:04:08,030 - root - INFO - (Leather sheath) For the Crow scout, crow jr, hunter skinner, cavner series, 8"-10" size, 4"-5" blades
+Regular price
+$45
+2021-11-04 22:04:08,427 - root - INFO - Drop leg SHEATH (large), tan leather belt loop carry,
+Regular price
+$45
+2021-11-04 22:04:08,818 - root - INFO - Drop leg sheath (small), veg tan leather
+Regular price
+$35
+2021-11-04 22:04:09,206 - root - INFO - Scalper decal/sticker dye cuts
+from $12
+2021-11-04 22:04:09,599 - root - INFO - DECALS, Half Face Blades logo
+Regular price
+$12
+2021-11-04 22:04:09,696 - root - INFO - All prices {<selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="9347dec4-d1e6-49a0-afd1-2750a911af65")>: 250.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="f5913ed0-2dce-453f-9c9b-98093c0502c3")>: 25.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="f458614e-c05f-40ac-99fe-16d41f42f80d")>: 45.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="81f67db5-fcf9-4734-8643-8d43ec9f9c17")>: 15.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="8bf8fbce-1f91-4fdb-b2da-c0e2fd124fc0")>: 10.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="ff959ef6-c95d-4e44-8845-2d2d3a74b2b5")>: 45.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="95285ed5-a624-4540-81e7-88d68c0f33b9")>: 45.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="e49762d6-8e55-4871-8438-65785f4ac3a4")>: 45.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="25067ae4-69a8-4a73-8cec-5c81d202e077")>: 45.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="b1078800-72fd-4f6a-a0b8-f065c35f6456")>: 45.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="1782407e-2ecc-4d57-98df-cacca5ca9545")>: 35.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="07c86ff9-44be-47f0-a17b-35941713ddb5")>: 12.0, <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="dcb1c185-f4f3-42a0-94d5-d0aae5a24c45")>: 12.0}
+2021-11-04 22:04:14,495 - root - INFO - On page: https://www.halffaceblades.com/cart
+2021-11-04 22:04:14,570 - root - INFO - Found Elements with text: ['Add to cart']
+2021-11-04 22:04:14,623 - root - INFO - Clicking button
+2021-11-04 22:04:14,678 - root - INFO - Clicked Locator(by='id', value='AddToCart-product-template')
+2021-11-04 22:04:16,685 - root - INFO - On page: https://www.halffaceblades.com/cart
+2021-11-04 22:04:18,643 - root - ERROR - Failed to find element
+Traceback (most recent call last):
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\elements\base_element.py", line 18, in find
+    elements = WebDriverWait(self.driver, 1).until(
+  File "C:\Users\T.Ntandika\PycharmProjects\AutoBuyKnives\env\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2021-11-04 22:04:19,711 - root - WARNING - Message: 
+
+2021-11-04 22:04:21,719 - root - INFO - going to complete shipping information
+2021-11-04 22:04:21,845 - root - INFO - Found Elements with text: ['Check out']
+2021-11-04 22:04:21,936 - root - INFO - Clicking button
+2021-11-04 22:04:29,987 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div[5]/main/div/div/form/footer/div/div/p[3]/button')
+2021-11-04 22:04:30,004 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/03e82c5d37edf92c543c8419499fba9b?_ga=2.259683146.1937754036.1636056236-509342935.1636056236
+2021-11-04 22:04:30,072 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:30,073 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="5b4aba60-5b46-4438-bfb4-274a399988d4")>
+2021-11-04 22:04:30,073 - root - INFO - sending text : Microne Digital
+2021-11-04 22:04:30,463 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:30,463 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="3b7906c0-8017-47f2-bde6-09179c9641fa")>
+2021-11-04 22:04:30,463 - root - INFO - sending text : CHE 44
+2021-11-04 22:04:30,717 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:30,717 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="a56765d9-a4b9-441c-b5a0-f6e5a6de226c")>
+2021-11-04 22:04:30,717 - root - INFO - sending text : CHE 44
+2021-11-04 22:04:30,970 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:30,970 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="2558d2b2-24b4-48df-ac75-dfa35f2234a2")>
+2021-11-04 22:04:30,970 - root - INFO - sending text : Flower Mound
+2021-11-04 22:04:31,203 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:31,203 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="2444f607-d892-4925-9ae9-0ca05e0a556b")>
+2021-11-04 22:04:31,204 - root - INFO - sending text : 75022
+2021-11-04 22:04:31,486 - root - INFO - Found Elements with text: ['United States', 'United States']
+2021-11-04 22:04:31,548 - root - INFO - Clicking option
+2021-11-04 22:04:31,597 - root - INFO - Clicked Locator(by='xpath', value="//option[@value='United States']")
+2021-11-04 22:04:31,660 - root - INFO - Found Elements with text: ['Continue to shipping']
+2021-11-04 22:04:31,721 - root - INFO - Clicking button
+2021-11-04 22:04:36,412 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/form/div[2]/button')
+2021-11-04 22:04:36,426 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/03e82c5d37edf92c543c8419499fba9b?previous_step=contact_information&step=shipping_method
+2021-11-04 22:04:36,439 - root - INFO - On url 444:https://www.halffaceblades.com/12593313/checkouts/03e82c5d37edf92c543c8419499fba9b?previous_step=contact_information&step=shipping_method
+2021-11-04 22:04:37,498 - root - INFO - Found Elements with text: ['Continue to payment']
+2021-11-04 22:04:37,543 - root - INFO - Clicking button
+2021-11-04 22:04:43,314 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/form/div[2]/button')
+2021-11-04 22:04:43,324 - root - INFO - This is the url :https://www.halffaceblades.com/12593313/checkouts/03e82c5d37edf92c543c8419499fba9b?previous_step=shipping_method&step=payment_method
+2021-11-04 22:04:43,331 - root - INFO - On page: https://www.halffaceblades.com/12593313/checkouts/03e82c5d37edf92c543c8419499fba9b?previous_step=shipping_method&step=payment_method
+2021-11-04 22:04:43,337 - root - INFO - 
+
+
+ https://www.halffaceblades.com/12593313/checkouts/03e82c5d37edf92c543c8419499fba9b?previous_step=shipping_method&step=payment_method
+https://www.halffaceblades.com/12593313/checkouts/03e82c5d37edf92c543c8419499fba9b?previous_step=shipping_method&step=payment_method
+
+2021-11-04 22:04:43,401 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:43,401 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="aeb83ef5-14e3-4715-a3d4-60a35d4d3c4d")>
+2021-11-04 22:04:43,401 - root - INFO - sending text : 4500
+2021-11-04 22:04:43,528 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:43,528 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="aeb83ef5-14e3-4715-a3d4-60a35d4d3c4d")>
+2021-11-04 22:04:43,528 - root - INFO - sending text : 4600
+2021-11-04 22:04:43,616 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:43,617 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="aeb83ef5-14e3-4715-a3d4-60a35d4d3c4d")>
+2021-11-04 22:04:43,617 - root - INFO - sending text : 0247
+2021-11-04 22:04:43,683 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:43,683 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="aeb83ef5-14e3-4715-a3d4-60a35d4d3c4d")>
+2021-11-04 22:04:43,683 - root - INFO - sending text : 1186
+2021-11-04 22:04:45,851 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:45,852 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="c8232e08-0ad1-43c2-838a-387f7b896e70")>
+2021-11-04 22:04:45,852 - root - INFO - sending text : 04
+2021-11-04 22:04:45,949 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:45,950 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="c8232e08-0ad1-43c2-838a-387f7b896e70")>
+2021-11-04 22:04:45,950 - root - INFO - sending text : 18
+2021-11-04 22:04:46,037 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:46,037 - root - INFO - sending text to : <selenium.webdriver.remote.webelement.WebElement (session="9c976e978a600dac2c5c4390e8b524ec", element="f390e919-8536-4445-bbbb-1a6ffea0066c")>
+2021-11-04 22:04:46,038 - root - INFO - sending text : 790
+2021-11-04 22:04:46,175 - root - INFO - Found Elements with text: ['']
+2021-11-04 22:04:46,238 - root - INFO - Clicking div
+2021-11-04 22:04:46,334 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/div/form/div[2]/div[2]/fieldset/div[1]/div')
+2021-11-04 22:04:46,413 - root - INFO - Found Elements with text: ['Pay now']
+2021-11-04 22:04:46,473 - root - INFO - Clicking button
+2021-11-04 22:04:46,558 - root - INFO - Clicked Locator(by='xpath', value='/html/body/div/div/div/main/div[1]/div/form/div[3]/div[1]/button')
+2021-11-04 22:04:46,558 - root - INFO - Clinked something
+2021-11-04 22:04:46,566 - root - INFO - This is the url :https://www.halffaceblades.com/12593313/checkouts/03e82c5d37edf92c543c8419499fba9b?previous_step=shipping_method&step=payment_method
+2021-11-04 22:04:46,566 - root - INFO - Completed shipping information
+2021-11-04 22:04:46,566 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max
+2021-11-04 22:04:46,567 - root - INFO - not max

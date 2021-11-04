@@ -14,6 +14,11 @@ class AddToCartPage(BasePage):
 
     @property
     def add_to_cart_button(self):
-        locator = Locator(by=By.ID, value="AddToCart")
+        locator = Locator(by=By.ID, value="AddToCart-product-template")
         return BaseElement(self.driver, locator)
+    #
+    # @property
+    # def add_to_cart_button(self):
+    #     locator = Locator(by=By.ID, value="AddToCart")
+    #     return BaseElement(self.driver, locator)
 
